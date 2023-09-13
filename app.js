@@ -38,4 +38,13 @@ eliminarContacto("juan")
 console.log(listaContacto);
 
 
+// Actualizar un contacto
 
+function actualizarContacto(nombre, nuevosDatos) {
+    for (let i = 0; i < listaContacto.length; i++) {
+        if (listaContacto[i].nombre === nombre) {
+            // Actualiza los datos del contacto
+            Object.assign(listaContacto[i], nuevosDatos);
+        }
+    }
+}
